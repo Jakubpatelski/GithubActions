@@ -2,4 +2,12 @@ name: my first workflow
 
 on: [push]
 jobs:
-  run-shell
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+      run: echo "Hello World"
+      - name: multiline scipt
+        run: |
+          node -v
+          npm -v
